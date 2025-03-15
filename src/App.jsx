@@ -1,16 +1,36 @@
-import styled from "styled-components";
+import "./App.css";
+import { BrowserRouter, Routes, Route, PrefetchPageLinks } from "react-router";
+import { ThemeProvider } from "styled-components";
+import Navbar from "./components/Navbar";
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 24px;
-  background-color:rgb(48, 44, 44);
-`;
+import { BackToTopButton } from "./components/BackToTopButton";
+import HomePage from "./components/HomePage";
+
+const root = document.getElementById("root");
+
+const theme = {
+  colors: {
+    primary: "#00968c",
+    secondary: "#00968c",
+    text: "#ffffff",
+  },
+};
 
 function App() {
-  return <Container>Hello, Vite + React + Styled Components!</Container>;
+  return (
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" />
+          <Route path="/products" />
+          <Route path="/contact" />
+        </Routes>
+      </BrowserRouter>
+      <BackToTopButton />
+    </ThemeProvider>
+  );
 }
 
 export default App;
