@@ -2,9 +2,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, PrefetchPageLinks } from "react-router";
 import { ThemeProvider } from "styled-components";
 import Navbar from "./components/Navbar";
-
-import { BackToTopButton } from "./components/BackToTopButton";
 import HomePage from "./components/HomePage";
+import ContactPage from "./components/ContactPage";
+import { BackToTopButton } from "./components/BackToTopButton";
 
 const root = document.getElementById("root");
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" />
           <Route path="/products" />
-          <Route path="/contact" />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
       <BackToTopButton />

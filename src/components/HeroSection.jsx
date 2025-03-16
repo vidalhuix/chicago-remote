@@ -8,8 +8,8 @@ export default function HeroSection() {
         Your browser does not support the video tag.
       </BackgroundVideo>
       <HeroContent>
-        <h1>WELCOME TO LUMEN</h1>
-        <p>EFFICIENT AND INNOVATIVE CAR CHARGING STATIONS</p>
+        <h1>WELCOME TO UPGRID</h1>
+        <p>WHERE INNOVATION AND EFFICIENCY MEETS</p>
       </HeroContent>
     </HeroContainer>
   );

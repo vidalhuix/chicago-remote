@@ -1,20 +1,38 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
     <NavbarContainer>
       <LeftContainer>
         <img src="/logo.svg" alt="company_logo" />
+        <span>UpGrid© Energy</span>
       </LeftContainer>
       <div />
       <RightContainer>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/products">Products</StyledLink>
-        <StyledLink to="/company">Company</StyledLink>
-        <StyledLink to="/partnership">Partnership</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
-        <StyledLink to="/suport">Support</StyledLink>
+        <StyledLink to="/" $active={location.pathname === "/"}>
+          Home
+        </StyledLink>
+        <StyledLink to="/products" $active={location.pathname === "/products"}>
+          Products
+        </StyledLink>
+        <StyledLink to="/company" $active={location.pathname === "/company"}>
+          Company
+        </StyledLink>
+        <StyledLink
+          to="/partnership"
+          $active={location.pathname === "/partnership"}
+        >
+          Partnership
+        </StyledLink>
+        <StyledLink to="/contact" $active={location.pathname === "/contact"}>
+          Contact
+        </StyledLink>
+        <StyledLink to="/support" $active={location.pathname === "/support"}>
+          Support
+        </StyledLink>
       </RightContainer>
     </NavbarContainer>
   );
@@ -22,6 +40,7 @@ export default function Navbar() {
 
 const NavbarContainer = styled.nav`
   position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
   z-index: 100;
   width: 100%;
   height: 80px;
@@ -37,12 +56,21 @@ const NavbarContainer = styled.nav`
 `;
 
 const LeftContainer = styled.div`
-  flex: 30%;
-  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  color: #00968c;
+  flex: 40%;
+  padding-left: 3%;
   img {
     z-index: 110;
     padding: 10px;
     height: 90%;
+  }
+  span {
+    white-space: nowrap;
+    bottom: 3px;
+    margin: 0;
   }
 `;
 
@@ -58,12 +86,13 @@ const RightContainer = styled.div`
 
 const StyledLink = styled(Link)`
   position: relative;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  color: ${(props) => (props.$active ? "#00968c" : "white")};
+  font-weight: ${(props) => (props.$active ? "bold" : "normal")};
   text-decoration: none;
   margin: 20px;
   &:hover {
     transform: scale(1.1);
+    transition: transform 150ms ease-in;
   }
   &::after {
     content: "";
@@ -74,7 +103,7 @@ const StyledLink = styled(Link)`
     width: 100%;
     height: 2px;
     background-color: currentColor;
-    
+
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;

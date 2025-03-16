@@ -21,7 +21,7 @@ export default function Presentation() {
 
 const Container = styled.div`
   position: relative;
-  margin: auto, 1.75rem, auto, 1.75rem;
+  margin: auto;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 900px;
   padding: 20px;
@@ -34,7 +34,6 @@ const Text = styled.p`
   display: inline-block;
   font-weight: bold;
   font-size: 1rem;
-
   line-height: 2rem;
   color: #3b3b3b;
   h1 {
