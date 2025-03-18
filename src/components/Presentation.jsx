@@ -24,9 +24,8 @@ const Container = styled.div`
   margin: auto;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 900px;
-  padding: 20px;
+  padding: 10px;
   @media (min-width: 640px) {
-    padding-left: 2.5rem;
   }
 `;
 
@@ -35,7 +34,6 @@ const Text = styled.p`
   font-weight: bold;
   font-size: 1rem;
   line-height: 2rem;
-  color: #3b3b3b;
   h1 {
     display: inline;
     color: #00968c;
@@ -43,5 +41,6 @@ const Text = styled.p`
   }
   p {
     display: inline;
+    color: #3b3b3b;
   }
 `;

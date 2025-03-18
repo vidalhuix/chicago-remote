@@ -51,7 +51,8 @@ export default function ContactPage() {
               E-MAIL
               <HiddenEmail>{contact.email}</HiddenEmail>
             </Email>
-            {copiedId === contact.id && <StyledFaCopy />} {/* Show icon only for the copied contact */}
+            {copiedId === contact.id && <StyledFaCopy />}{" "}
+            {/* Show icon only for the copied contact */}
           </Info>
         </ContactCard>
       ))}
@@ -60,16 +61,28 @@ export default function ContactPage() {
 }
 
 const Container = styled.div`
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100vh;
-  padding: 20px;
-  flex-direction: row;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 3;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  max-width: 900px;
+  gap: 40px;
+  color: white;
+  padding: 40px;
+
+  @media (min-width: 900px) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    max-width: 900px;
+  }
 `;
 
 const ContactCard = styled.div`
@@ -77,14 +90,17 @@ const ContactCard = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  gap: 30px;
   padding: 15px;
   width: 300px;
   text-align: center;
   line-height: 1.5;
   color: #3b3b3b;
-  h2,
+  h2 {
+    color: #00968c;
+    margin-bottom: 0;
+  }
   p {
+    color: #3b3b3b;
     margin: 0;
   }
 `;
@@ -93,6 +109,8 @@ const Image = styled.img`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
+  min-height: 150px;
+  min-width: 150px;
   border-radius: 50%;
   border: 3px solid white;
   object-fit: cover;
@@ -100,7 +118,7 @@ const Image = styled.img`
 `;
 
 const Info = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
 `;
@@ -127,11 +145,10 @@ const HiddenEmail = styled.span`
   left: 0;
 `;
 
-
 const StyledFaCopy = styled(FaCopy)`
   position: absolute;
   bottom: 5px;
   right: 5px;
-  color: #cac6c6;
+  color: #949494;
   margin-left: 5px;
 `;

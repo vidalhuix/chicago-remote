@@ -34,3 +34,6 @@ function App() {
 }
 
 export default App;
+
+//referens
+// https://www.compleocharging.se/en/contact-info

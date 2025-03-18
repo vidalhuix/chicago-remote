@@ -22,9 +22,13 @@ const HeroContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
   overflow: hidden;
+  padding: 10px;
+  h1,
+  p {
+    color: white;
+  }
 `;
 
 const BackgroundVideo = styled.video`
