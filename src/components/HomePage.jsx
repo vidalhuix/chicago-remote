@@ -1,3 +1,4 @@
+import { DownloadSection } from "./DownloadSection";
 import HeroSection from "./HeroSection";
 import MarketOpportunity from "./MarketSection";
 import Presentation from "./Presentation";
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Presentation />
       <MarketOpportunity />
       <PresentationTwo />
+      <DownloadSection/>
     </>
   );
 }

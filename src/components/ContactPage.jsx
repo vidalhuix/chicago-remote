@@ -61,7 +61,6 @@ export default function ContactPage() {
 }
 
 const Container = styled.div`
-  height:100%;
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 3;
@@ -72,6 +71,7 @@ const Container = styled.div`
   
   margin-top: 100px;
   @media (min-width: 900px) {
+    margin-top: 200px;
     display: flex;
     margin-left: auto;
     margin-right: auto;

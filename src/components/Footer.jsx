@@ -4,14 +4,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterContent>
-        <FooterText>© 2023 Upgrid© Energy. All rights reserved.</FooterText>
-        <div>
-          <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
-          <FooterLink href="/terms-of-service">Terms of Service</FooterLink>
-          <FooterLink href="/contact">Contact Us</FooterLink>
-        </div>
-      </FooterContent>
+      <FooterText>2023 Upgrid© Energy. All rights reserved.</FooterText>
     </FooterContainer>
   );
 };
@@ -24,24 +17,14 @@ const FooterContainer = styled.footer`
   padding: 20px;
   text-align: center;
   margin-top: auto;
-`;
-
-const FooterContent = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
-
-const FooterLink = styled.a`
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  &:hover {
-    text-decoration: underline;
+  font-size: 12px;
+  @media (max-width: 600px) {
+    font-size: 10px;
   }
-`;
+  `;
+
 
 const FooterText = styled.p`
+color: #fff;
   margin: 10px 0;
-  font-size: 14px;
 `;

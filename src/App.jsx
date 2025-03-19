@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css"
 import { ThemeProvider } from "styled-components";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";

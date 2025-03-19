@@ -152,7 +152,8 @@ const StyledLink = styled(Link)`
 
 const StyledBtnMenu = styled.button`
   position: absolute;
-  right: 50px;
+  right: 30px;
+  TOP: 25px;
   font-size: 30px;
   border: none;
   background: none;
