@@ -33,7 +33,7 @@ export const BackToTopButton = () => {
 
 const StyledButton = styled.button`
   position: fixed;
-  background-color: #1f2220;
+  background-color: rgba(0, 0, 0, 0.8);
   padding-top: 7px;
   height: 50px;
   width: 50px;

@@ -69,7 +69,7 @@ const NavbarContainer = styled.nav`
   z-index: 100;
   width: 100%;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -106,7 +106,7 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-  flex: 70%;
+  flex: 10%;
   display: flex;
   justify-content: space-between;
   padding-right: 5%;
@@ -152,7 +152,7 @@ const StyledLink = styled(Link)`
 
 const StyledBtnMenu = styled.button`
   position: absolute;
-  right: 20px;
+  right: 50px;
   font-size: 30px;
   border: none;
   background: none;
@@ -173,7 +173,7 @@ const Modal = styled.div`
   left: 0;
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;

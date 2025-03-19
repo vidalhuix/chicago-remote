@@ -50,5 +50,5 @@ const HeroContent = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   max-width: 900px;
   padding: 20px;
-  top: 200px;
+  top: 80px;
 `;

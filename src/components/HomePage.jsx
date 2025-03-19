@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection";
 import MarketOpportunity from "./MarketSection";
 import Presentation from "./Presentation";
+import PresentationTwo from "./PresentationTwo";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <HeroSection />
       <Presentation />
       <MarketOpportunity />
+      <PresentationTwo />
     </>
   );
 }

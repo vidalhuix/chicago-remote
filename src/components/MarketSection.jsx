@@ -5,15 +5,15 @@ export default function MarketOpportunity() {
   const statsData = [
     {
       title: "$163 billion",
-      text: "Market research predicts that the EV charging market will be worth $163 billion in 2024 and $652 billion in 2029, growing by 300% by that time.",
+      text: "Market research predicts that the EV charging market will be worth $652 billion in 2029, growing by 300% by that time.",
     },
     {
       title: "$30 billion",
-      text: "Residential solar panels were estimated at $30 billion in 2022 and are estimated to grow at a CAGR of 13.7% by 2030.",
+      text: "Residential solar panels are estimated to grow at a CAGR of 13.7% by 2030.",
     },
     {
       title: "15.4%",
-      text: "According to a study by Infinity Business Insights, the global renewable energy management software market size is forecasted to expand at a CAGR of 15.4% through 2032.",
+      text: "According Infinity Business Insights study, the global renewable energy management software market size is forecasted to expand at a CAGR of 15.4% through 2032.",
     },
   ];
 
@@ -51,6 +51,10 @@ const Content = styled.div`
   align-items: center;
   gap: 50px;
   align-items: start;
+  @media (max-width: 600px) {
+    gap: 0;
+    flex-direction: column;
+  }
 `;
 
 const Image = styled.img`
@@ -69,13 +73,15 @@ const Title = styled.p`
   font-size: 30px;
   text-transform: uppercase;
   display: inline-block;
+  text-align: center;
 `;
 
 const StatBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+
   h3 {
     color: white;
     font-size: 22px;
